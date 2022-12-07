@@ -7,7 +7,12 @@ sudo apt-get install zsh neofetch lolcat figlet
 #Install startship prompt
 curl -sS https://starship.rs/install.sh | sh
 #Copy dotfiles to correct directory
+mkdir .config
 cp ./zshrc /home/$USER/.zshrc
 cp ./starship.toml /home/$USER/.config/
-
-echo 'Installation complete please restart terminal'
+cd .config
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+cd
+echo 'Installation complete, Please use "chsh" command and type "/bin/zsh" please restart terminal'
