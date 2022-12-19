@@ -3,7 +3,7 @@
 clear
 #Install dependency
 echo 'Installation of dependencie please wait'
-sudo apt-get install zsh neofetch lolcat figlet
+sudo apt-get install zsh neofetch lolcat figlet curl
 #Install startship prompt
 curl -sS https://starship.rs/install.sh | sh
 #Copy dotfiles to correct directory
