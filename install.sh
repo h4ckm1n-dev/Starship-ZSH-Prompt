@@ -1,9 +1,39 @@
 #/bin/bash
 
-clear
-#Install dependency
-echo 'Installation of dependencie please wait'
-sudo apt-get install zsh git curl
+# Determine the OS version
+OS=$(lsb_release -si)
+VERSION=$(lsb_release -sr)
+
+# Install dependencies for each OS
+if [ "$OS" == "CentOS" ] || [ "$OS" == "RedHat" ]; then
+  if [ "$VERSION" == "7" ]; then
+    yum install -y  zsh git curl
+  elif [ "$VERSION" == "8" ]; then
+    dnf install -y zsh git curl
+  fi
+elif [ "$OS" == "Debian" ]; then
+  if [ "$VERSION" == "8" ]; then
+    apt-get install -y zsh git curl
+  elif [ "$VERSION" == "9" ]; then
+    apt-get install -y zsh git curl
+  fi
+elif [ "$OS" == "Arch" ]; then
+  pacman -S zsh git curl
+elif [ "$OS" == "Raspbian" ]; then
+  apt-get install -y zsh git curl
+elif [ "$OS" == "Fedora" ]; then
+  dnf install -y zsh git curl
+elif [ "$OS" == "Ubuntu" ]; then
+  apt-get install -y zsh git curl
+elif [ "$OS" == "Kali" ]; then
+  apt-get install -y zsh git curl
+elif [ "$OS" == "Manjaro" ]; then
+  pacman -S zsh git curl
+else
+  echo "This script does not support your OS."
+  exit 1
+fi
+
 #Install startship prompt
 curl -sS https://starship.rs/install.sh | sh
 #Copy dotfiles to correct directory
