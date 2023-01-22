@@ -1,5 +1,14 @@
 #/bin/bash
 
+echo "It is important to check that the configuration file paths are correct before running this script to avoid deleting important files."
+read -p "Are you sure you want to continue? (y/n): " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    exit 1
+fi
+
+
 # Determine the OS version
 if command -v lsb_release > /dev/null; then
   OS=$(lsb_release -si)
