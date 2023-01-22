@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "If zsh is already installed you need to backup your .zshrc file . Also it is important to check that the configuration file paths are correct before running this script to avoid deleting important files."
+echo "This script install starship prompt with zsh and copy my custom config and replace .zshrc. If zsh is already installed you need to backup your .zshrc file . Also it is important to check that the configuration file paths are correct before running this script to avoid deleting important files."
 read -p "Are you sure you want to continue? (y/n): " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
