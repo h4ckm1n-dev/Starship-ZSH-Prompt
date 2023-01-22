@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "This script install starship prompt with zsh and copy my custom config and replace .zshrc. If zsh is already installed you need to backup your .zshrc file . Also it is important to check that the configuration file paths are correct before running this script to avoid deleting important files."
+echo "This script installs the Starship prompt with Zsh and copies custom config files to replace the current .zshrc file. Please make sure to backup your current .zshrc file before proceeding. Also, please verify that the configuration file paths are correct before running the script to avoid deleting important files."
+
 read -p "Are you sure you want to continue? (y/n): " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
@@ -44,43 +45,44 @@ else
 fi
 
 # Install dependencies for each OS
-if [ "$OS" == "CentOS" ] || [ "$OS" == "RedHat" ]; then
-  if [ "$VERSION" == "7" ]; then
-    yum install -y zsh git curl
-  elif [ "$VERSION" == "8" ]; then
-    dnf install -y zsh git curl
-  fi
-elif [ "$OS" == "Debian" ]; then
-  if [ "$VERSION" == "8" ]; then
-    apt-get install -y zsh git curl
-  elif [ "$VERSION" == "9" ]; then
-    apt-get install -y zsh git curl
-  fi
-elif [ "$OS" == "Arch" ]; then
-  pacman -S zsh git curl
-elif [ "$OS" == "Raspbian" ]; then
-  apt-get install -y zsh git curl
-elif [ "$OS" == "Fedora" ]; then
-  dnf install -y zsh git curl
-elif [ "$OS" == "Ubuntu" ]; then
-  apt-get install -y zsh git curl
-elif [ "$OS" == "Kali" ]; then
-  apt-get install -y zsh git curl
-elif [ "$OS" == "Manjaro" ]; then
-  pacman -S zsh git curl
-else
-  echo "This script does not support your OS."
-  exit 1
-fi
+case "$OS" in
+    "CentOS"|"RedHat")
+        if [[ "$VERSION" == "7" ]]; then
+            yum install -y zsh git curl
+        elif [[ "$VERSION" == "8" ]]; then
+            dnf install -y zsh git curl
+        fi
+        ;;
+    "Debian")
+        if [[ "$VERSION" == "8" || "$VERSION" == "9" ]]; then
+            apt-get install -y zsh git curl
+        fi
+        ;;
+    "Arch")
+        pacman -S zsh git curl
+        ;;
+    "Raspbian"|"Fedora"|"Ubuntu"|"Kali"|"Manjaro")
+        ${OS,,} S apt-get install -y zsh git curl
+        ;;
+    *)
+        echo "This script does not support your OS."
+        exit 1
+esac
 
-#Install startship prompt
-curl -sS https://starship.rs/install.sh | sh
-#Copy dotfiles to correct directory
-mkdir ~/.config
-cp ./zshrc /home/$USER/.zshrc
-cp ./starship.toml /home/$USER/.config/
-cd ~/.config
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-cd ~/
-echo 'Installation complete, Please use "chsh" command and type "/bin/zsh" then restart terminal'
+# Install the Starship prompt
+curl -fsSL https://starship.rs/install.sh | sh
+
+# Backup current .zshrc file
+cp ~/.zshrc ~/.zshrc.bak
+
+# Copy custom config files
+cp ./zshrc ~/.zshrc
+mkdir -p ~/.config/
+cp -r ./starship.toml ~/.config/
+
+# Clone additional repositories for autocomplete and syntax highlighting
+mkdir -p ~/.config/zsh
+git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/zsh-autosuggestions
+git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/zsh-syntax-highlighting
+
+echo 'Installation complete. Please restart your terminal to start using the new prompt.'
