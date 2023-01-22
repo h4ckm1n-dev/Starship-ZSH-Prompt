@@ -7,7 +7,7 @@ VERSION=$(lsb_release -sr)
 # Install dependencies for each OS
 if [ "$OS" == "CentOS" ] || [ "$OS" == "RedHat" ]; then
   if [ "$VERSION" == "7" ]; then
-    yum install -y  zsh git curl
+    yum install -y zsh git curl
   elif [ "$VERSION" == "8" ]; then
     dnf install -y zsh git curl
   fi
