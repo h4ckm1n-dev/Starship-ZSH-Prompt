@@ -268,11 +268,11 @@ fi
 # set an icon based on the distro
 # make sure your font is compatible with https://github.com/lukas-w/font-logos
 case $_distro in
-    *ubuntu*)                ICON="ﴣ";;
+    *Kali*)                ICON="ﴣ";;
     *arch*)                  ICON="";;
     *debian*)                ICON="";;
     *raspbian*)              ICON="";;
-    *)                       ICON="";;
+    *ubuntu*)                       ICON="";;
     *elementary*)            ICON="";;
     *fedora*)                ICON="";;
     *coreos*)                ICON="";;
@@ -290,7 +290,7 @@ case $_distro in
     *manjaro*)               ICON="";;
     *rhel*)                  ICON="";;
     *macos*)                 ICON="";;
-    *kali*)                  ICON="";;
+    *)                  ICON="";;
 esac
 
 export STARSHIP_DISTRO="$ICON"
