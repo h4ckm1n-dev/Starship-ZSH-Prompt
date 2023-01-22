@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 echo "It is important to check that the configuration file paths are correct before running this script to avoid deleting important files."
 read -p "Are you sure you want to continue? (y/n): " -n 1 -r
@@ -8,14 +8,14 @@ then
     exit 1
 fi
 
-
 # Determine the OS version
 if command -v lsb_release > /dev/null; then
   OS=$(lsb_release -si)
   VERSION=$(lsb_release -sr)
 elif [ -f /etc/os-release ]; then
-  OS=$(grep ^ID= /etc/os-release | cut -f 2- -d =)
-  VERSION=$(grep ^VERSION_ID= /etc/os-release | cut -f 2- -d =)
+  . /etc/os-release
+  OS=$ID
+  VERSION=$VERSION_ID
 elif [ -f /etc/arch-release ]; then
   OS="Arch"
   VERSION=$(pacman -Q archlinux | awk '{print $2}')
@@ -34,6 +34,10 @@ elif [ -f /etc/kali-version ]; then
 elif [ -f /etc/manjaro-release ]; then
   OS="Manjaro"
   VERSION=$(cat /etc/manjaro-release | awk '{print $2}')
+elif [ -f /etc/lsb-release ]; then
+    . /etc/lsb-release
+    OS=$DISTRIB_ID
+    VERSION=$DISTRIB_RELEASE
 else
   echo "This script does not support your OS."
   exit 1
