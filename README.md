@@ -2,7 +2,7 @@
 My personal Startship custom config with zsh, zsh completion and zsh highlighting
 
 
-# Dowload the repo
+# Download the repo
 git clone https://github.com/h4ckm1n-dev/Starship-ZSH-Prompt.git
 
 # Make install.sh executable
