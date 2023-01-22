@@ -1,5 +1,5 @@
 # Starship-ZSH-Prompt
-My personal Startship custom config with zsh, zsh completion and zsh highlighting
+My personal Startship config with zsh, zsh completion and zsh highlighting
 
 
 # Download the repo
