@@ -20,7 +20,7 @@ chsh
 ```
 answer /bin/zsh
 
-Done ! Enjoy your new terminal !
+#Done ! Enjoy your new terminal !
 
 Preview :
 ![Capture](https://user-images.githubusercontent.com/97511408/214269720-3dd3e9bd-45dd-4acc-84ea-3e0a046160d4.PNG)
