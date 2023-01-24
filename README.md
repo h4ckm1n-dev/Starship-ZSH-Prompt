@@ -1,5 +1,5 @@
 # Starship-ZSH-Prompt
-My personal Startship config with zsh, zsh completion and zsh highlighting
+My personal Startship config with zsh, zsh completion and zsh highlighting. the script is compatible with ubuntu, debian, arch, centos, red hat and fedora
 
 
 # Download the repo
