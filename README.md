@@ -3,6 +3,8 @@ My personal Startship config with zsh, zsh completion and zsh highlighting. the 
 
 # Credits :
 https://starship.rs/
+https://github.com/zsh-users/zsh-syntax-highlighting
+https://github.com/zsh-users/zsh-autosuggestions
 
 # Download the repo :
 ```
