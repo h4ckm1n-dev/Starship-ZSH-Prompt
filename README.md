@@ -1,5 +1,5 @@
 # Starship-ZSH-Prompt :
-My personal Startship config with zsh, zsh completion and zsh highlighting and a responsive distribution icon. the script is compatible with ubuntu, debian, arch, centos, red hat and fedora
+My personal Startship config with a lot of developement language icon, using zsh, zsh completion and zsh highlighting and a responsive distribution icon. the script is compatible with ubuntu, debian, arch, centos, red hat and fedora
 
 # Credits :
 https://starship.rs/
