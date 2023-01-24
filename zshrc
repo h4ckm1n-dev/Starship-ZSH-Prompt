@@ -290,7 +290,7 @@ case $_distro in
     *manjaro*)               ICON="";;
     *rhel*)                  ICON="";;
     *macos*)                 ICON="";;
-    *)                  ICON="";;
+    *)                       ICON="";;
 esac
 
 export STARSHIP_DISTRO="$ICON"
@@ -312,8 +312,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(starship init zsh)"
-source <(kubectl completion zsh)
 
+source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # >>>> Vagrant command completion (start)
 fpath=(/usr/share/rubygems-integration/all/gems/vagrant-2.2.19/contrib/zsh $fpath)
 compinit
