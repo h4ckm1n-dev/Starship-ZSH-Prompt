@@ -48,21 +48,21 @@ fi
 case "$OS" in
     "CentOS"|"RedHat")
         if [[ "$VERSION" == "7" ]]; then
-            yum install -y zsh git curl
+            sudo yum install -y zsh git curl
         elif [[ "$VERSION" == "8" ]]; then
-            dnf install -y zsh git curl
+            sudo dnf install -y zsh git curl
         fi
         ;;
     "Debian")
         if [[ "$VERSION" == "8" || "$VERSION" == "9" ]]; then
-            apt-get install -y zsh git curl
+            sudo apt-get install -y zsh git curl
         fi
         ;;
     "Arch")
-        pacman -S zsh git curl
+        sudo pacman -S zsh git curl
         ;;
     "Raspbian"|"Fedora"|"Ubuntu"|"Kali"|"Manjaro")
-        ${OS,,} S apt-get install -y zsh git curl
+        sudo apt-get install -y zsh git curl
         ;;
     *)
         echo "This script does not support your OS."
