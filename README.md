@@ -1,5 +1,5 @@
 # Starship-ZSH-Prompt :
-My personal Startship config with a lot of developement language icon, using zsh, zsh completion and zsh highlighting and a responsive distribution icon. the script is compatible with ubuntu, debian, arch, centos, red hat and fedora
+This is a shell script that installs and configures Zsh on Linux and macOS, with custom configuration files for the Starship prompt. It includes dependencies installation, backups of current .zshrc file, and cloning of additional repositories for autocomplete and syntax highlighting.
 
 # Credits :
 https://starship.rs/
