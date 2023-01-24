@@ -272,7 +272,7 @@ case $_distro in
     *arch*)                  ICON="";;
     *debian*)                ICON="";;
     *raspbian*)              ICON="";;
-    *ubuntu*)                       ICON="";;
+    *ubuntu*)                ICON="";;
     *elementary*)            ICON="";;
     *fedora*)                ICON="";;
     *coreos*)                ICON="";;
