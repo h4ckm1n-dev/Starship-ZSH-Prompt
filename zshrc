@@ -1,7 +1,7 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
-source ~/.config/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 setopt autocd              # change directory just by typing its name
 setopt correct            # auto correct mistakes
