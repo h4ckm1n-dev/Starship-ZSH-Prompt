@@ -268,7 +268,7 @@ fi
 # set an icon based on the distro
 # make sure your font is compatible with https://github.com/lukas-w/font-logos
 case $_distro in
-    *Kali*)                ICON="ﴣ";;
+    *Kali*)                  ICON="ﴣ";;
     *arch*)                  ICON="";;
     *debian*)                ICON="";;
     *raspbian*)              ICON="";;
