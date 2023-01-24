@@ -5,6 +5,7 @@ My personal Startship config with a lot of developement language icon, using zsh
 https://starship.rs/
 https://github.com/zsh-users/zsh-syntax-highlighting
 https://github.com/zsh-users/zsh-autosuggestions
+https://github.com/marlonrichert/zsh-autocomplete
 
 # Download the repo :
 ```
