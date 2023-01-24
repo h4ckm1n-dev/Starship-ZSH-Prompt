@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "This script installs the Starship prompt with Zsh and copies custom config files to replace the current .zshrc file. Please make sure to backup your current .zshrc file before proceeding. Also, please verify that the configuration file paths are correct before running the script to avoid deleting important files."
+echo "Please note that this script performs a backup of the current .zshrc file before replacing it with the custom configuration files. Also, please verify that the configuration file paths are correct before running the script to avoid deleting important files."
 
 read -p "Are you sure you want to continue? (y/n): " -n 1 -r
 echo
