@@ -1,5 +1,5 @@
 # Starship-ZSH-Prompt :
-This is a shell script that installs and configures Zsh on Linux and macOS, with custom configuration files for the Starship prompt. It includes dependencies installation, backups of current .zshrc file, and cloning of additional repositories for autocomplete and syntax highlighting.
+This is a shell script that installs and configures Zsh on Linux distributions including Ubuntu, Debian, Arch, Manjaro, Kali, Raspbian, Fedora, CentOS, and Red Hat. The script includes custom configuration files for the Starship prompt, which adds developer-friendly features such as icons for various programming languages, responsive distribution icons, and support for Zsh completions and syntax highlighting. The script also includes the installation of dependencies, backup of current .zshrc file, and cloning of additional repositories for autocomplete and syntax highlighting to enhance the overall user experience.
 
 # Credits :
 https://starship.rs/
