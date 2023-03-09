@@ -1,7 +1,7 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
-source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/.config/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 setopt autocd              # change directory just by typing its name
 setopt correct            # auto correct mistakes
@@ -312,7 +312,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(starship init zsh)"
-
+source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # >>>> Vagrant command completion (start)
 fpath=(/usr/share/rubygems-integration/all/gems/vagrant-2.2.19/contrib/zsh $fpath)
