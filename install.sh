@@ -81,9 +81,9 @@ mkdir -p ~/.config/
 cp -r ./starship.toml ~/.config/
 
 # Clone additional repositories for autocomplete and syntax highlighting
-mkdir -p ~/.config/zsh
+mkdir -p ~/.config/ & cd ~/.config/
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/zsh-autosuggestions
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/zsh-syntax-highlighting
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
-
+cd ~/
 echo 'Installation complete. Please restart your terminal to start using the new prompt.'
