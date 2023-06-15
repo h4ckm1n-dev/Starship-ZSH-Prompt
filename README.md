@@ -25,6 +25,9 @@ chsh
 ```
 answer /bin/zsh
 
+# Install nerd fonts on your system ( i use Cousine NF )
+https://www.nerdfonts.com/font-downloads
+
 # Done ! Enjoy your new terminal !
 
 Preview :
