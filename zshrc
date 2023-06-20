@@ -314,7 +314,3 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(starship init zsh)"
 source ~/.config/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# >>>> Vagrant command completion (start)
-fpath=(/usr/share/rubygems-integration/all/gems/vagrant-2.2.19/contrib/zsh $fpath)
-compinit
-# <<<<  Vagrant command completion (end)
