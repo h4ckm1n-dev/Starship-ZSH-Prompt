@@ -85,4 +85,7 @@ git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions ~/.config/z
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh-syntax-highlighting
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.config/zsh-syntax-autocomplete
 
+# Change the default shell to Zsh
+chsh -s $(which zsh)
+
 echo 'Installation complete. Please restart your terminal to start using the new prompt.'
