@@ -288,9 +288,9 @@ case $_distro in
     *nixos*)                 ICON="";;
     *devuan*)                ICON="";;
     *manjaro*)               ICON="";;
-    *rhel*)                  ICON="";;
+    *)                       ICON="";;
     *macos*)                 ICON="";;
-    *)                       ICON="";;
+    *linux*)                 ICON="";;
 esac
 
 export STARSHIP_DISTRO="$ICON"
