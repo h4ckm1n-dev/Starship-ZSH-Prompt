@@ -32,18 +32,18 @@ disabled = false
 [username]
 style_user = "bold green"
 style_root = "bold Red"
-format = "[$user]($style) "
+format = "[$user®]($style) "
 disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = "on [$hostname](bold yellow) "
+format = "on [  $hostname](bold yellow) "
 disabled = false
 
 [localip]
 ssh_only = true
-format = "@ [$localipv4](bold blue) "
+format = " [$localipv4](bold blue) "
 disabled = false
 
 [memory_usage]
@@ -54,7 +54,7 @@ style = "bold dimmed green"
 
 [time]
 disabled = true
-format = '🕙[\[ $time \]]($style) '
+format = '[\[ $time \]]($style) '
 time_format = "%T"
 utc_time_offset = "-5"
 time_range = "00:00:00-00:00:00"
@@ -62,13 +62,13 @@ time_range = "00:00:00-00:00:00"
 [directory]
 truncation_length = 1
 truncation_symbol = "…/"
-home_symbol = " ~"
+home_symbol = " ~"
 read_only_style = "197"
-read_only = "  "
+read_only = "  "
 format = "at [$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-symbol = " "
+symbol = " "
 format = "via [$symbol$branch]($style) "
 # truncation_length = 4
 truncation_symbol = "…/"
@@ -77,26 +77,26 @@ style = "bold green"
 [git_status]
 format = '[\($all_status$ahead_behind\)]($style) '
 style = "bold green"
-conflicted = "🏳"
+conflicted = ""
 up_to_date = " "
-untracked = " "
+untracked = " "
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
-stashed = " "
-modified = " "
+stashed = "󰆧 "
+modified = "󱝽 "
 staged = '[++\($count\)](green)'
-renamed = "襁 "
+renamed = " "
 deleted = " "
 
 [kubernetes]
-format = 'via [ﴱ $context\($namespace\)](bold purple) '
-disabled = true
+format = 'via [󱃾 $context\($namespace\)](bold purple) '
+disabled = false
 
 # (deactivated because of no space left)
 # 
 [terraform]
-format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
+format = "via [ terraform $version]($style)  [$workspace]($style) "
 disabled = false
 
 [vagrant]
@@ -104,23 +104,22 @@ format = "via [ vagrant $version](bold blue) "
 disabled = false
 
 [docker_context]
-format = "via [ $context](bold blue) "
+format = "via [󰡨 $context](bold blue) "
 disabled = false
 
 [helm]
-format = "via [ $version](bold purple) "
+format = "via [󰠳 $version](bold purple) "
 disabled = false
 
 [python]
-symbol = " "
+symbol = " "
 python_binary = "python3"
 disabled = false
 
 [nodejs]
-format = "via [ $version](bold green) "
+format = "via [󰎙 $version](bold green) "
 disabled = false
 
 [ruby]
-format = "via [ $version]($style) "
+format = "via [ $version]($style) "
 disabled = false
-
