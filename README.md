@@ -19,12 +19,6 @@ chmod +x install.sh
 ```
 ./install.sh
 ```
-# Make zsh your defaut shell :
-```
-chsh
-```
-answer /bin/zsh
-
 # Install nerd fonts on your system ( i use Cousine NF )
 https://www.nerdfonts.com/font-downloads
 
